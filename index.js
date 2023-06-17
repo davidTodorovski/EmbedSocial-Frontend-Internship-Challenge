@@ -15,6 +15,9 @@ const xMark = document.querySelector(".fa-xmark");
 const socialMediaPosts = [];
 let page = 1;
 
+const RES_PER_PAGE = 4
+
+
 const isCheckedLS = localStorage.getItem('isCheckboxChecked')
 const isChecked = JSON.parse(isCheckedLS)
 isCheckedLS ? checkbox.checked = isChecked : false
@@ -66,8 +69,8 @@ const closeLightbox = (e) => {
 
 // Function that gets the number of posts depending on the value of page
 const getFeedPostsResults = function (page, array) {
-  const start = (page - 1) * 4;
-  const end = page * 4;
+  const start = (page - 1) * RES_PER_PAGE;
+  const end = page * RES_PER_PAGE;
 
   return array.slice(start, end);
 };
