@@ -338,6 +338,15 @@ input:checked + .slider:before {
   transition: all 0.3s ease 0s;
 }
 
+.no-posts-msg {
+  display: none;
+  color: var(--darkMode-color-two);
+  max-width: 300px;
+  text-align: center;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
 .load-more-btn:hover {
   transform: scale(1.05);
 }
@@ -349,6 +358,10 @@ input:checked + .slider:before {
 .dark-mode .load-more-btn {
   border-color: var(--secondary-text-color);
   color: var(--secondary-text-color);
+}
+
+.dark-mode .no-posts-msg {
+  color: var(--lightMode-color-one);
 }
 
 /* Media Breakpoints */
@@ -377,6 +390,10 @@ input:checked + .slider:before {
 
   .card-caption.caption-initial-height {
     height: 16px;
+  }
+
+  .no-posts-msg {
+    font-size: 14px;
   }
 }
 

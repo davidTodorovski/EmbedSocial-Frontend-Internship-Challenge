@@ -11,6 +11,7 @@ const imageLightbox = document.querySelector(".image-lightbox-container img");
 const darkenedBackground = document.querySelector(".darkened");
 const mainContainer = document.querySelector(".main");
 const xMark = document.querySelector(".fa-xmark");
+const noPostsMsg = document.querySelector(".no-posts-msg")
 
 const socialMediaPosts = [];
 let page = 1;
@@ -160,6 +161,7 @@ loadMoreBtn.addEventListener("click", (e) => {
 
   if (page >= Math.ceil(socialMediaPosts.length / 4)) {
     e.target.parentElement.remove();
+    noPostsMsg.style.display = "block"
   }
 
   renderFeedPosts(getFeedPostsResults(page, socialMediaPosts));
